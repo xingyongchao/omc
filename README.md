@@ -1,5 +1,5 @@
 // 进入src文件夹下载yxyweb代码
-git clone git@git.yonyou.com:fangqg/yxyweb.git
+git clone git@git.yonyou.com:yxyframework/yxyweb.git
 
 // 项目初始化
 npm install

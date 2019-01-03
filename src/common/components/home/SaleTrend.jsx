@@ -10,12 +10,14 @@ import { connect } from 'react-redux';
 import * as homeactions from '../../redux/modules/home';
 
 const TabPane = Tabs.TabPane;
-import ReactEcharts from 'yxyweb/common/components/AsyncComponents/AsyncEchartsForReact'
-// import ReactEcharts from 'echarts-for-react';
+// import ReactEcharts from 'yxyweb/common/components/AsyncComponents/AsyncEchartsForReact'
+import ReactEcharts from 'echarts-for-react';
+// let ReactEcharts = null;
 
 class SaleTrend extends React.Component {
   constructor(props) {
     super(props);
+    // ReactEcharts = require('yxyweb/common/components/AsyncComponents/AsyncEchartsForReact').default;
     this.state = {
 
       visible: false,

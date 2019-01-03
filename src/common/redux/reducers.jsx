@@ -13,10 +13,12 @@ import forget from './modules/forget'
 import print from 'yxyweb/common/redux/print'
 import billDesign from 'yxyweb/common/redux/billDesign'
 import home from './modules/home'
-import systemSetting from './modules/systemSetting'
+import systemSetting from 'yxyweb/common/redux/systemSetting'
 import loading from 'yxyweb/common/redux/loading'
 import groupCondition from 'yxyweb/common/redux/groupCondition'
 import formula from 'yxyweb/common/redux/formula';
+import addMessage from 'yxyweb/common/redux/addMessage';
+import filterscheme from 'yxyweb/common/redux/filterscheme'
 
 export default combineReducers({
   portal,
@@ -36,4 +38,6 @@ export default combineReducers({
   loading,
   groupCondition,
   formula,
+  addMessage,
+  filterscheme,
 })

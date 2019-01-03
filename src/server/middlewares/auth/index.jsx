@@ -23,11 +23,13 @@ export default function (routes) {
       };
       const json = await uniformProxy(config);
       if (json.code === 200) {
-        cookies.set('token', json.data.token, {
+        const { token } = json.data;
+        cookies.set('token', token, {
           path: '/',
           expires: new Date(Date.now() + 24 * 3600 * 1000),
           httpOnly: false
         });
+        ctx.token = token;
         return await next();
       } else {
         ctx.logger.error(`根据yxyToken获取token失败：【接口】${url} 【异常】${json.message}`);

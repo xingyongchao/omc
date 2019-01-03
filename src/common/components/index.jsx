@@ -1,2 +1,2 @@
-export DynamicView from './basic/DynamicView'
+export DynamicView from 'yxyweb/common/components/portal/DynamicView'
 export BasicTest from 'yxyweb/common/components/basic-test';

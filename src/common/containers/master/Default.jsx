@@ -5,8 +5,11 @@ import {connect} from 'react-redux';
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 import classname from 'classnames'
 import {Layout, Spin, Modal, message, Icon} from 'antd';
-import {LeftMenu, TopMenu, Tabs} from '../../components/portal';
-import DynamicModal from 'yxyweb/common/components/basic/DynamicModal';
+// import {LeftMenu, TopMenu, Tabs} from '../../components/portal';
+import LeftMenu from 'yxyweb/common/components/portal/LeftMenu';
+import TopMenu from '../../components/portal/TopMenu';
+import Tabs from 'yxyweb/common/components/portal/Tabs';
+import DynamicModal from 'yxyweb/common/components/portal/DynamicModal';
 
 import * as tabsactions from 'yxyweb/common/redux/tabs';
 
@@ -75,6 +78,7 @@ class Page extends Component {
     const menuCount = this.props.tree.TreeData.length;
     if (menuCount)
       minHeight += 44 * menuCount;
+    minHeight += 20;
     let loadingControl = null;
     if (this.state.loading)
       loadingControl = <div className="ant-modal-mask uretail-loading-bg">

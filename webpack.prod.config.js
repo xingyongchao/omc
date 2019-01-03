@@ -27,6 +27,7 @@ var config = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
+  externals: ['meta-touch'],
   module: {
     //root: origin,
     //modulesDirectories: ['node_modules'],
