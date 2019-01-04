@@ -31,6 +31,7 @@ require('./fileupload').default(router)
 require('./ueditor').default(router)
 require('./amap').default(router)
 require('./sourceMap').default(router);
+require('yxyweb/server/controllers/filter').default(router)
 
 function renderPageContent(ctx, internals) {
   const pageInfo = {
