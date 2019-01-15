@@ -16,6 +16,7 @@ export class Router extends Component {
         <Route path="/expire" component={Pages.ExpirePage} />
         <Route path="/portal" component={Pages.DefaultPage} />
         <Route path="/test" component={Pages.TestPage} />
+        <Route exact path="/platform/:menuurl" component={Components.DynamicView} />
         <Route exact path="/meta/:billtype/:billno" component={Components.DynamicView} />
         <Route path="/meta/:billtype/:billno/:billid" component={Components.DynamicView} />
         <Route path="/echartcarousel" component={Pages.EChartCarousel} />
