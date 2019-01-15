@@ -17,6 +17,18 @@ export default function (router) {
       title: ctx.params.menuId
     });
   })
+  router.get('/platform/:menuurl', async function (ctx) {
+    const user = await getLoginUser(ctx);
+    if (!user) {
+      ctx.redirect('/login');
+      return;
+    }
+    ctx.store.dispatch({
+      type: 'PLATFORM_UI_USER_INIT',
+      payload: user
+    });
+    ctx.render({ title: ctx.params.menuurl });
+  });
   router.get('/meta/:billtype/:billno', function (ctx) {
     if (ctx.entryPoint === 'touch') {
       ctx.redirect('/billing');
