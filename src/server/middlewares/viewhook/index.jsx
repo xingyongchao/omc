@@ -17,6 +17,7 @@ const directNext = function (ctx) {
     || ctx.path.startsWith('/login')
     || ctx.path.startsWith('/billing')
     || ctx.path.startsWith('/meta')
+    || ctx.path.startsWith('/platform')
     || ctx.path.startsWith('/echartcarousel'))
     return false;
   return true;
