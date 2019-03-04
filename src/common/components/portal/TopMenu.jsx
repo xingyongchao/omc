@@ -76,7 +76,6 @@ class TopMenu extends Component {
       tabsactions.activateItem(accountCenterKey);
       return;
     }
-    debugger
     tabsactions.addItem({
       key: accountCenterKey,
       title: '授权',
