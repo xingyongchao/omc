@@ -44,9 +44,7 @@ export default function configureStore(entryPoint, initialState) {
 
     middlewares.push(createLogger(args))
   }
-  console.log(reducerMap);
-  console.log(entryPoint);
-  console.log(reducerMap[entryPoint]);
+
   const store = createStore(reducerMap[entryPoint], initialState, compose(
     applyMiddleware(...middlewares),
     process.env.__CLIENT__ && window.devToolsExtension ? window.devToolsExtension() : f => f

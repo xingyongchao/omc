@@ -9,7 +9,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node bin/server/index.js",
     "debug:client": "cross-env BABEL_ENV=development webpack-dev-server --progress --colors  --config webpack.dev.config.js",
-    "debug:server": "cross-env BABEL_ENV=production NODE_ENV=development SRV_URL=http://127.0.0.1:8080 PRINT_SERVER=http://uretailserver.yonyouup.com/print_service nodemon -w src/server -w src/common -w src/yxyweb/server -w src/yxyweb/common --exec babel-node --inspect src/server/app.jsx",
+    "debug:server": "cross-env BABEL_ENV=production NODE_ENV=development SRV_URL=http://upc-server.test.app.yyuap.com PRINT_SERVER=http://uretailserver.yonyouup.com/print_service nodemon -w src/server -w src/common -w src/yxyweb/server -w src/yxyweb/common --exec babel-node --inspect src/server/app.jsx",
     "build:dll:dev": "cross-env NODE_ENV=development webpack --config webpack.dll.config.js",
     "build:dll:prod": "cross-env NODE_ENV=production webpack --config webpack.dll.config.js",
     "build:dll": "npm run build:dll:dev && npm run build:dll:prod",
@@ -61,6 +61,7 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.1.0",
+    "u8c-components": "0.0.7",
     "uuid": "^3.0.1",
     "warning": "^3.0.0",
     "winston": "^2.2.0"

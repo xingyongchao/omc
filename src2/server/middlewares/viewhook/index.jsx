@@ -31,7 +31,6 @@ export default function viewhook(_options = { beautify: true, internals: true })
       await next();
       return;
     }
-    debugger;
     let isTouch = ctx.header['user-agent'].match(/(Android);?[\s\/]+([\d.]+)?/) || ctx.header['user-agent'].match(/(Electron);?[\s\/]+([\d.]+)?/) || ctx.path === '/billing/touch' || ctx.path === '/login/touch' || ctx.path === '/billing/second';
     const interMode = ctx.cookies.get('interMode');
     if (interMode) {

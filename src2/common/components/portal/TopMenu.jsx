@@ -65,27 +65,7 @@ class TopMenu extends Component {
     const {useractions} = this.props;
     useractions.setAccountActiveKey('personalInfo');
   }
-  //TODO 添加授权
-  handleAthority=()=>{
-    const accountCenterKey = 'authority';
-    const {tabsactions, tabs} = this.props;
-    const index = tabs.panes.findIndex(pane => {
-      return pane.key === accountCenterKey;
-    });
-    if (index > -1) {
-      tabsactions.activateItem(accountCenterKey);
-      return;
-    }
-    debugger
-    tabsactions.addItem({
-      key: accountCenterKey,
-      title: '授权',
-      content: {
-        type: 'platform',
-        url: 'authority'
-      }
-    });
-  }
+
   handleUpdateLogInfo = () => {
     const key = 'update-log'
     const {tabsactions, tabs} = this.props;
@@ -318,7 +298,6 @@ class TopMenu extends Component {
 
           <Popover trigger={this.state.trigger} content={<div className='title-setting top-right-title'>
 
-            <p><a onClick={() => this.handleAthority()}><Icon type='user'/>授权</a></p>
             <p><a onClick={() => this.handlePersonalInfo()}><Icon type='user'/>个人信息</a></p>
             <p><a onClick={() => this.handleChangePsd()}><Icon type='lock'/>修改密码</a></p>
             <p><a onClick={() => this.handleLogout()}><Icon type="poweroff"/>退出登录</a></p></div>}>

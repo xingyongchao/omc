@@ -44,6 +44,9 @@ var config = {
   resolve: {
 
     extensions: [".js", ".jsx"],
+    alias: {
+      'u8c': 'u8c-components/dist',
+    }
   },
   externals: ['meta-touch'],
   module: {
@@ -66,7 +69,7 @@ var config = {
         options: {
           limit: 8192
         },
-        include: origin,
+        // include: origin,
       }, {
         test: /\.less$/,
         use: [
