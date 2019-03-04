@@ -3,7 +3,6 @@ autogenerate
 bin
 logs
 node_modules
-# src/yxyweb
 static/public
 static/styles/default
 npm-debug.log
